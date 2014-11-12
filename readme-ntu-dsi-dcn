@@ -1,0 +1,34 @@
+#simulating different Data-Center architectutre in NTU-DSI-DCN Framework#
+
+1. Prerequiste for ntu-dsi-dcn framework.
+	a. install pre-requiste for ns-3 installation (refer to http://www.nsnam.org/wiki/Installation) 
+		or 
+		enter following command 
+		sudo apt-get install gcc g++ python python-dev mercurial git bzr gdb valgrind tcpdump sqlite sqlite3 libsqlite3-dev libxml2 libxml2-dev libgtk2.0-0 libgtk2.0-dev gcc-multilib libboost-signals-dev libboost-filesystem-dev python-pygraphviz python-kiwi python-pygoocanvas libgoocanvas-dev
+
+	b. Clone the framework  from ntu-dsi-dcn
+
+		git clone https://github.com/bibekluitel/ntu-dsi-dcn/    #make sure git is installed before using hg command#
+
+2. Installing the Framework 
+	a. go to the directory  where the framework is cloned      
+				 cd ~/ntu-dsi-dcn 
+	b. configure the system by 
+				./waf configure
+	c. install the framework
+				./waf
+	
+3. Running a sample program in framework
+	a. after sucessful installtion of the framework run the sample program by 
+			./waf --run scratch/Fat-tree  
+
+
+4. Anlayzing the output
+	The output file are given in ~/ntu-dsi-dcn/statistics
+	a. for trace file 
+		i. install trace metrics (refer http://mohittahiliani.blogspot.in/2014/08/ns-3-tracemetrics-trace-file-analyzer.html ).
+		ii. open the output file in your ntu-dsi-dcn folder
+
+	b. for all Pcap file
+		i. install  wireshark. 
+		ii. open each individual  file in wireshark.
